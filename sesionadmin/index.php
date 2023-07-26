@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
   include('db.php');
- ?>
+ ?> -->
 
 <!DOCTYPE html>
 <html lang="es">
@@ -14,35 +14,26 @@
     <title>IDAE SPORTS</title>
 </head>
 <body>
-  
-<form action="validar.php" method="post">
-<div class="contenido">
-  <form action="#" >
-    <div class="form-content">
-      <div class="inicio-formulario">
-        <div class="titulo">Inicia tu sesión de administrador</div>
-        <div class="casilla-entrada">
-          <div class="casilla">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" placeholder="Usuario de admin" name="usuario" >
-          </div>
-
-          <div class="casilla">
-            <input type="password" placeholder="Contraseña" name="password" >
-          </div>
-          <div class="button-casilla">
-          <input type="submit" name="" value="Ingresar" >
-        </form>
-        <?php
+  <form class="form" action="validar.php" method="post">
+    <h1 class="titulo">Inicia tu sesión <br> de administrador</h1>
+    <section class="casilla">
+      <label for="usuario">Usuario de admin</label>
+      <input id="usuario" type="text" placeholder="Coloca tu usuario" name="usuario" >
+    </section>
+    <section class="casilla">
+      <label for="usuario">Contraseña</label>
+     <input type="password" placeholder="Coloca tu contraseña" name="password" >
+    </section>
+<!-- 
+    <?php
 $noUser = $_GET["user"];
-if($noUser==="2") {
-  echo '<p>No admin</p>';
+if($noUser==="1") {
+  echo '<p class="error"> Usuario o contraseña incorrectos </p>';
 }
- ?>
-          </div>
-        </div>
-      </div>
-    </div>
+ ?> -->
+    <section class="actions">
+      <input type="submit" name="" value="Ingresar" >
+    </section>
   </form>
 </div>
 </body>
