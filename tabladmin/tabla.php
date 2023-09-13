@@ -45,6 +45,10 @@
                     <a href="#"><h4>Deportistas registrados</h4></a>
                 </div>
             
+                <div class="option">
+                    <i class="far fa-futbol" title="Deportistas"></i>
+                    <a href="../tabladmin2/tabla.php"><h4>Entrenadores registrados</h4></a>
+                </div>
 
             <a href="#">
                 <div class="option">
@@ -53,12 +57,25 @@
                 </div>
             </a>
 
+            <a href="#">
+                <div class="option">
+                    <i class="far fa-address-card" title="Nosotros"></i>
+                    <a href="../index.html"><h4>Cerrar Sesión</h4></a>
+                </div>
+            </a>
+
         </div>
 
     </div>
 
+
+    
     <main>
     <h1>Usuarios registrados</h1>
+
+    <form action="busqueda.php" method="post">
+                <input type="text" name="Id" required="">
+                <input type="submit" name="" required="">
 
 <div class="tabladatos">
   <table class="tabla">
@@ -76,8 +93,7 @@
     </thead>
     <tbody>
       <?php
-      $sql="SELECT * FROM usuario"; // todos los registros de la tabla
-       //$sql="SELECT * FROM personal WHERE nombre='juan'"; // registros condicionales
+      $sql="SELECT * FROM usuario";
         $result = mysqli_query($conexion,$sql);
         while($mostrar = mysqli_fetch_array($result)){
 

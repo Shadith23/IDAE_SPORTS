@@ -32,45 +32,30 @@
 
         <div class="options__menu">	
 
-            <a href="#" class="selected">
+        <a href="#" class="selected">
                 <div class="option">
                     <i class="fas fa-home" title="Inicio"></i>
-                    <a href="../paginap/home.html"><h4>Inicio</h4></a>
+                    <a href="../paginadmin/home.php"><h4>Inicio</h4></a>
                 </div>
             </a>
 
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-file" title="Mensajes"></i>
-                    <h4>Mensajes</h4>
-                </div>
-            </a>
             
-            <a href="#">
-                <div class="option">
-                    <i class="fas fa-video" title="Multimedia"></i>
-                    <h4>Videos y fotos</h4>
-                </div>
-            </a>
-
-            <a href="#">
                 <div class="option">
                     <i class="far fa-futbol" title="Deportistas"></i>
-                    <h4>Deportistas</h4>
+                    <a href="../tabladmin/tabla.php"><h4>Deportistas registrados</h4></a>
                 </div>
-            </a>
+
+                
+                <div class="option">
+                    <i class="far fa-futbol" title="Deportistas"></i>
+                    <a href="#"><h4>Entrenadores registrados</h4></a>
+                </div>
+            
 
             <a href="#">
                 <div class="option">
-                    <i class="far fa-id-badge" title="Contacto"></i>
-                    <h4>Contacto</h4>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-address-card" title="Nosotros"></i>
-                    <h4>Nosotros</h4>
+                    <i class="far fa-user" title="Nosotros"></i>
+                    <a href="../registro/index.html"><h4>Registrar</h4></a>
                 </div>
             </a>
 
@@ -99,12 +84,13 @@
         <th>DEPORTE</th>
         <th>EDAD</th>
         <th>CORREO</th>
+        <th>TELEFONO</th>
         
       </tr>
     </thead>
     <tbody>
       <?php
-      $sql="SELECT * FROM usuario"; // todos los registros de la tabla
+      $sql="SELECT * FROM profes"; // todos los registros de la tabla
        //$sql="SELECT * FROM personal WHERE nombre='juan'"; // registros condicionales
         $result = mysqli_query($conexion,$sql);
         while($mostrar = mysqli_fetch_array($result)){
@@ -113,12 +99,13 @@
 
       <tr>
         <td><?php echo $mostrar['Id'] ?> </td>  
-        <td><?php echo $mostrar['nombre'] ?> </td>
-        <td><?php echo $mostrar['usuario'] ?> </td>
-        <td><?php echo $mostrar['password'] ?> </td>
-        <td><?php echo $mostrar['deporte'] ?> </td>
-        <td><?php echo $mostrar['edad'] ?> </td>
-        <td><?php echo $mostrar['correo'] ?> </td>
+        <td><?php echo $mostrar['Nombre'] ?> </td>
+        <td><?php echo $mostrar['Usuario'] ?> </td>
+        <td><?php echo $mostrar['Password'] ?> </td>
+        <td><?php echo $mostrar['Deporte'] ?> </td>
+        <td><?php echo $mostrar['Edad'] ?> </td>
+        <td><?php echo $mostrar['Correo'] ?> </td>
+        <td><?php echo $mostrar['Telefono'] ?> </td>
         
       </tr>
 

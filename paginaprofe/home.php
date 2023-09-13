@@ -55,7 +55,7 @@
             
                 <div class="option">
                     <i class="far fa-futbol" title="Deportistas"></i>
-                    <a href="../tabla/tabla.php"><h4>Deportistas</h4></a>
+                    <a href="../tablaprofes/tabla.php"><h4>Deportistas</h4></a>
                 </div>
             
 
@@ -65,6 +65,7 @@
                     <h4>Contacto</h4>
                 </div>
             </a>
+
 
             <a href="#">
                 <div class="option">
@@ -80,13 +81,13 @@
     <main>
         
 
-       <!--  <?php
-      $sql="SELECT * FROM usuario WHERE usuario = 'MauricioC' " ;
-        $result = mysqli_query($conexion,$sql);
-        $data = mysqli_fetch_assoc($result);
-       ?> -->
+        <!-- <?php
+      $sql="SELECT * FROM admin WHERE usuario = 'Mauricio23' " ;
+      $result = mysqli_query($conexion,$sql);
+      $data = mysqli_fetch_assoc($result);
+     ?> -->
 
-<h1>Bienvenido, Usuario <!-- <?php echo $data['usuario'] ?> </h1> -->
+<h1>Bienvenido, Jorge Vasques<!-- <?php echo $data['usuario'] ?> </h1> -->
 
       
 

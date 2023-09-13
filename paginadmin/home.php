@@ -45,6 +45,11 @@
                     <a href="../tabladmin/tabla.php"><h4>Deportistas registrados</h4></a>
                 </div>
             
+                <div class="option">
+                    <i class="far fa-futbol" title="Deportistas"></i>
+                    <a href="../tabladmin2/tabla.php"><h4>Entrenadores registrados</h4></a>
+                </div>
+            </a>    
 
             <a href="#">
                 <div class="option">
@@ -53,6 +58,16 @@
                 </div>
             </a>
 
+
+
+            <a href="#">
+                <div class="option">
+                    <i class="far fa-address-card" title="Nosotros"></i>
+                    <a href="../index.html"><h4>Cerrar Sesión</h4></a>
+                </div>
+            </a>
+            
+
         </div>
 
     </div>
@@ -60,13 +75,13 @@
     <main>
         
 
-        <?php
-      $sql="SELECT * FROM admin WHERE usuario = 'MauricioCR' " ;
+        <!-- <?php
+      $sql="SELECT * FROM admin WHERE usuario = 'Mauricio23' " ;
         $result = mysqli_query($conexion,$sql);
         $data = mysqli_fetch_assoc($result);
-       ?>
+       ?> -->
 
-<h1>Bienvenido, <?php echo $data['usuario'] ?> </h1>
+<h1>Bienvenido, Admin<!-- <?php echo $data['usuario'] ?> </h1> -->
 
       
 
