@@ -33,7 +33,7 @@ include('tabla.php');
     <?php
         session_start();
         $_SESSION['value'] = $_POST['Id'];
-    if ($_SESSION['miVariable'] !== "") {
+    if ($_SESSION['value'] !== "") {
         $Id=$_POST['Id'];
         $sql="SELECT * FROM usuario WHERE Id='$Id'";
           $result=mysqli_query($conexion,$sql);
@@ -57,7 +57,7 @@ include('tabla.php');
         
         
         <?php
-    } else if ($_SESSION['miVariable'] == "") {
+    } else if ($_SESSION['value'] == "") {
         $sql="SELECT * FROM usuario";
         $result=mysqli_query($conexion,$sql);
         while($mostrar = mysqli_fetch_array($result)){
