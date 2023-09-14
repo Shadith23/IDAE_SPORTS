@@ -14,6 +14,7 @@ include('db.php');
     
 <?php
 include('tabla.php');
+include('db.php');
 ?>
     <table>
 
