@@ -33,6 +33,7 @@ include('tabla.php');
             <?php
         session_start();
         $_SESSION['value'] = $_POST['Id'];
+        $sessionValue = $_POST['Id'] ? $_SESSION['value'] : '';
         if ($_SESSION['value'] !== "") {
             $Id=$_POST['Id'];
             $sql="SELECT * FROM usuario WHERE Id='$Id'";
@@ -84,6 +85,10 @@ include('tabla.php');
     
     ?>
     <h1><?php echo $_SESSION['value']?></h1>
+    <script>
+var sessionValue = "<?php echo $sessionValue; ?>";
+console.log(sessionValue);
+</script>
 </tbody>
     </table>
 </body>
