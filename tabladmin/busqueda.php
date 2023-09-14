@@ -30,15 +30,16 @@ include('tabla.php');
         </thead>
    
         <tbody>
-    <?php
+            <?php
         session_start();
         $_SESSION['value'] = $_POST['Id'];
-    if ($_SESSION['value'] !== "") {
-        $Id=$_POST['Id'];
-        $sql="SELECT * FROM usuario WHERE Id='$Id'";
-          $result=mysqli_query($conexion,$sql);
-          while($mostrar = mysqli_fetch_array($result)){
-           ?>
+        if ($_SESSION['value'] !== "") {
+            $Id=$_POST['Id'];
+            $sql="SELECT * FROM usuario WHERE Id='$Id'";
+            $result=mysqli_query($conexion,$sql);
+            while($mostrar = mysqli_fetch_array($result)){
+                ?>
+                <h1><?php echo $_SESSION['value']?></h1>
            <tr>
                <td><?php echo $mostrar ['Id']?></td>
                <td><?php echo $mostrar ['nombre']?></td>
@@ -80,7 +81,9 @@ include('tabla.php');
            ?>
            <?php
     }
+    
     ?>
+    <h1><?php echo $_SESSION['value']?></h1>
 </tbody>
     </table>
 </body>
