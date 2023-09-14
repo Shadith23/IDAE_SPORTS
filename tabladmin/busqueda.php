@@ -32,10 +32,7 @@ include('tabla.php');
         <tbody>
     <?php
         session_start();
-
-        if (isset($_POST['Id'])) {
-            $_SESSION['value'] = $_POST['Id'];
-        }
+        $_SESSION['value'] = $_POST['Id'];
     if (isset($_SESSION['miVariable']) !== "") {
         $Id=$_POST['Id'];
         $sql="SELECT * FROM usuario WHERE Id='$Id'";
