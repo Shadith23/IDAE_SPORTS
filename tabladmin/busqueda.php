@@ -31,7 +31,7 @@ include('tabla.php');
    
         <tbody>
     <?php
-    if ($Id=$_POST['Id']) {
+    if ($Id=$_POST['Id'] !== "") {
         $Id=$_POST['Id'];
         $sql="SELECT * FROM usuario WHERE Id='$Id'";
           $result=mysqli_query($conexion,$sql);
@@ -55,7 +55,7 @@ include('tabla.php');
         
         
         <?php
-    } else {
+    } else if ($Id=$_POST['Id'] == "") {
         $sql="SELECT * FROM usuario";
         $result=mysqli_query($conexion,$sql);
         while($mostrar = mysqli_fetch_array($result)){
