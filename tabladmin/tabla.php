@@ -74,7 +74,7 @@
     <h1>Usuarios registrados</h1>
 
     <form action="busqueda.php" method="post">
-                <input type="text" name="Id" required="">
+                <input type="text" name="Id" required="" >
                 <input type="submit" name="" required="">
 
 <div class="tabladatos">
@@ -117,8 +117,6 @@
     </tbody>
   </table>
 </div>
-
-
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -31,7 +31,12 @@ include('tabla.php');
    
         <tbody>
     <?php
-    if ($Id=$_POST['Id'] !== "") {
+        session_start();
+
+        if (isset($_POST['Id'])) {
+            $_SESSION['value'] = $_POST['Id'];
+        }
+    if ($_SESSION['value'] !== "") {
         $Id=$_POST['Id'];
         $sql="SELECT * FROM usuario WHERE Id='$Id'";
           $result=mysqli_query($conexion,$sql);
