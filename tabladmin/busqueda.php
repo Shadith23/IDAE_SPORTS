@@ -60,7 +60,7 @@ include('tabla.php');
         
         
         <?php
-    } else if ($Id=$_POST['Id'] == "") {
+    } else if ($_SESSION['value'] == "") {
         $sql="SELECT * FROM usuario";
         $result=mysqli_query($conexion,$sql);
         while($mostrar = mysqli_fetch_array($result)){
