@@ -31,25 +31,52 @@ include('tabla.php');
    
         <tbody>
     <?php
- $Id=$_POST['Id'];
- $sql="SELECT * FROM usuario WHERE Id='$Id'";
-   $result=mysqli_query($conexion,$sql);
-   while($mostrar = mysqli_fetch_array($result)){
-
-    ?>
-    <tr>
-        <td><?php echo $mostrar ['Id']?></td>
-        <td><?php echo $mostrar ['nombre']?></td>
-        <td><?php echo $mostrar ['usuario']?></td>
-        <td><?php echo $mostrar ['password']?></td>
-        <td><?php echo $mostrar ['deporte']?></td>
-        <td><?php echo $mostrar ['edad']?></td>
-        <td><?php echo $mostrar ['correo']?></td>
-    </tr
-    
-    
-    </tr>
-    <?php
+    if ($Id=$_POST['Id']) {
+        $Id=$_POST['Id'];
+        $sql="SELECT * FROM usuario WHERE Id='$Id'";
+          $result=mysqli_query($conexion,$sql);
+          while($mostrar = mysqli_fetch_array($result)){
+           ?>
+           <tr>
+               <td><?php echo $mostrar ['Id']?></td>
+               <td><?php echo $mostrar ['nombre']?></td>
+               <td><?php echo $mostrar ['usuario']?></td>
+               <td><?php echo $mostrar ['password']?></td>
+               <td><?php echo $mostrar ['deporte']?></td>
+               <td><?php echo $mostrar ['edad']?></td>
+               <td><?php echo $mostrar ['correo']?></td>
+          </tr>
+           
+           
+           </tr>
+           <?php
+           }
+           ?>
+        
+        
+        <?php
+    } else {
+        $sql="SELECT * FROM usuario";
+        $result=mysqli_query($conexion,$sql);
+        while($mostrar = mysqli_fetch_array($result)){
+            
+            ?>
+           <tr>
+               <td><?php echo $mostrar ['Id']?></td>
+               <td><?php echo $mostrar ['nombre']?></td>
+               <td><?php echo $mostrar ['usuario']?></td>
+               <td><?php echo $mostrar ['password']?></td>
+               <td><?php echo $mostrar ['deporte']?></td>
+               <td><?php echo $mostrar ['edad']?></td>
+               <td><?php echo $mostrar ['correo']?></td>
+               </tr>
+               
+               
+               </tr>
+               <?php
+           }
+           ?>
+           <?php
     }
     ?>
 </tbody>
