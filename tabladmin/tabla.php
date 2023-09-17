@@ -75,9 +75,10 @@
 
     <form action="busqueda.php" method="post">
                 <input type="text" name="Id" required="" >
-                <input type="submit" name="" required="">
-
-<div class="tabladatos">
+                <input id="submit" type="submit" name="" required="">
+            </form>
+<h1 class="title">Usuarios totales</h1>
+<div class="tabladatos tabla-origin" id="table">
   <table class="tabla">
     <thead>
       <tr>
@@ -118,5 +119,6 @@
   </table>
 </div>
     <script src="js/script.js"></script>
+    <script src="js/button.js"></script>
 </body>
 </html>
