@@ -21,6 +21,7 @@
         <div class="icon__menu">
             <i class="fas fa-bars" id="btn_open"></i>
         </div>
+        <h1 class="bienvenido">Bienvenido Admin <!-- <?php echo $data['usuario'] ?> </h1> -->
     </header>
 
     <div class="menu__side" id="menu_side">
@@ -33,12 +34,6 @@
         <div class="options__menu">	
 
         <a href="#" class="selected">
-                <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <a href="../paginadmin/home.php"><h4>Inicio</h4></a>
-                </div>
-            </a>
-
             
                 <div class="option">
                     <i class="far fa-futbol" title="Deportistas"></i>
@@ -53,7 +48,14 @@
             <a href="#">
                 <div class="option">
                     <i class="far fa-user" title="Nosotros"></i>
-                    <a href="../registro/index.html"><h4>Registrar</h4></a>
+                    <a href="../registro/index.html"><h4>Registrar Deportistas</h4></a>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="far fa-user" title="Nosotros"></i>
+                    <a href="../registroentre/index.html"><h4>Registrar Entrenadores</h4></a>
                 </div>
             </a>
 
@@ -71,12 +73,13 @@
 
     
     <main>
-    <h1>Usuarios registrados</h1>
-
-    <form action="busqueda.php" method="post">
-                <input type="text" name="Id" required="" >
-                <input id="submit" type="submit" name="" required="">
-            </form>
+    <section class="search-container">
+        <h1>Usuarios registrados</h1>
+        <form action="busqueda.php" method="post">
+            <input type="text" name="Id" required="" >
+            <input id="submit" type="submit" name="" required="">
+        </form>
+    </section>
 <h1 class="title">Usuarios totales</h1>
 <div class="tabladatos tabla-origin" id="table">
   <table class="tabla">
@@ -89,6 +92,8 @@
         <th>DEPORTE</th>
         <th>EDAD</th>
         <th>CORREO</th>
+        <th>VERIFICACION  </th> <!-- NUEVO-->
+        <th>ACCIONES</th> <!-- NUEVO-->
         
       </tr>
     </thead>
@@ -108,7 +113,17 @@
         <td><?php echo $mostrar['deporte'] ?> </td>
         <td><?php echo $mostrar['edad'] ?> </td>
         <td><?php echo $mostrar['correo'] ?> </td>
-        
+        <td>
+              <!-- editar-->
+              <a href="editar.php?id=<?php echo $mostrar['Id'] ?>">Editar</a>
+
+              <!-- eliminar-->
+              <form action="eliminar.php" method="post">
+                <input type="text" class="aaa" value="<?php echo $mostrar['Id']?>" name="Id" readonly>
+                <td><input class="accion" type="submit" value="Eliminar"></td>
+              </form>
+
+            </td>
       </tr>
 
       <?php
@@ -119,6 +134,5 @@
   </table>
 </div>
     <script src="js/script.js"></script>
-    <script src="js/button.js"></script>
 </body>
 </html>

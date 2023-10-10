@@ -38,33 +38,19 @@
                     <h4>Inicio</h4>
                 </div>
             </a>
+
       <a href="#">
                 <div class="option">
                     <i class="far fa-file" title="Mensajes"></i>
-                    <h4>Mensajes</h4>
+                    <a href="../mensajesprofes/home.php"><h4>Mensajes</h4></a>
                 </div>
-            </a>
-            
-            <a href="#">
-                <div class="option">
-                    <i class="fas fa-video" title="Multimedia"></i>
-                    <h4>Videos y fotos</h4>
-                </div>
-            </a>
+            </a>    
 
             
                 <div class="option">
                     <i class="far fa-futbol" title="Deportistas"></i>
                     <a href="../tablaprofes/tabla.php"><h4>Deportistas</h4></a>
                 </div>
-            
-
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-id-badge" title="Contacto"></i>
-                    <h4>Contacto</h4>
-                </div>
-            </a>
 
 
             <a href="#">
@@ -79,13 +65,6 @@
     </div>
 
     <main>
-        
-
-        <!-- <?php
-      $sql="SELECT * FROM admin WHERE usuario = 'Mauricio23' " ;
-      $result = mysqli_query($conexion,$sql);
-      $data = mysqli_fetch_assoc($result);
-     ?> -->
 
 <h1>Bienvenido, Jorge Vasques<!-- <?php echo $data['usuario'] ?> </h1> -->
 

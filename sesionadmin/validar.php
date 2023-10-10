@@ -9,7 +9,7 @@
     $filas=mysqli_num_rows($resultado);
 
     if($filas){
-        header("location:../Paginadmin/home.php");
+        header("location:../tabladmin/tabla.php");
     }else{
         header("location:index.php?user=2");
     } 

@@ -45,26 +45,11 @@
                 </div>
             </a>
             
-            <a href="#">
-                <div class="option">
-                    <i class="fas fa-video" title="Multimedia"></i>
-                    <h4>Videos y fotos</h4>
-                </div>
-            </a>
-
-            
                 <div class="option">
                     <i class="far fa-futbol" title="Deportistas"></i>
-                    <a href="../tabla/tabla.php"><h4>Deportistas</h4></a>
+                    <a href="../tabla/tabla.php"><h4>Compañeros</h4></a>
                 </div>
             
-
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-id-badge" title="Contacto"></i>
-                    <h4>Contacto</h4>
-                </div>
-            </a>
 
             <a href="#">
                 <div class="option">
@@ -86,7 +71,7 @@
         $data = mysqli_fetch_assoc($result);
        ?> -->
 
-<h1>Bienvenido, Usuario <!-- <?php echo $data['usuario'] ?> </h1> -->
+<h1>Bienvenido Deportistas <!-- <?php echo $data['usuario'] ?> </h1> -->
 
       
 

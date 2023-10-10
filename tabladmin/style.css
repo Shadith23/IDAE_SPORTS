@@ -15,7 +15,7 @@ body{
 }
 
 main{
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 header{
@@ -28,6 +28,11 @@ header{
     top: 0;
     z-index: 200;
 }
+
+.bienvenido{
+    margin-left: 30%;
+}
+
 
 .icon__menu{
     width: 50px;
@@ -42,6 +47,7 @@ header{
     font-size: 20px;
     cursor: pointer;
     position: absolute;
+    
 }
 
 .menu__side{
@@ -173,6 +179,11 @@ td{
 }
 .body-search h1{
     margin-bottom: 60px;
+}
+.search-container {
+    width: 100%;
+    background-color: white;
+    position: fixed;
 }
 .tabla-origin {
     margin-top: -150px;

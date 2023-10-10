@@ -32,14 +32,8 @@
 
         <div class="options__menu">	
 
-            <a href="#" class="selected">
-                <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <h4>Inicio</h4>
-                </div>
-            </a>
 
-            
+            <a href="#" class="selected">
                 <div class="option">
                     <i class="far fa-futbol" title="Deportistas"></i>
                     <a href="../tabladmin/tabla.php"><h4>Deportistas registrados</h4></a>
@@ -54,7 +48,14 @@
             <a href="#">
                 <div class="option">
                     <i class="far fa-user" title="Nosotros"></i>
-                    <a href="../registro/index.html"><h4>Registrar</h4></a>
+                    <a href="../registro/index.html"><h4>Registrar Deportistas</h4></a>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="option">
+                    <i class="far fa-user" title="Nosotros"></i>
+                    <a href="../registroentre/index.html"><h4>Registrar Entrenadores</h4></a>
                 </div>
             </a>
 
@@ -81,7 +82,7 @@
         $data = mysqli_fetch_assoc($result);
        ?> -->
 
-<h1>Bienvenido, Admin<!-- <?php echo $data['usuario'] ?> </h1> -->
+
 
       
 

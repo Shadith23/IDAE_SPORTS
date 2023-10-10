@@ -32,56 +32,35 @@
 
         <div class="options__menu">	
 
-            <a href="#" class="selected">
-                <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <a href="../paginap/home.html"><h4>Inicio</h4></a>
-                </div>
-            </a>
+<a href="#" class="selected">
+    <div class="option">
+        <i class="fas fa-home" title="Inicio"></i>
+        <h4>Inicio</h4>
+    </div>
+</a>
+<a href="#">
+    <div class="option">
+        <i class="far fa-file" title="Mensajes"></i>
+        <h4>Mensajes</h4>
+    </div>
+</a>
 
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-file" title="Mensajes"></i>
-                    <h4>Mensajes</h4>
-                </div>
-            </a>
-            
-            <a href="#">
-                <div class="option">
-                    <i class="fas fa-video" title="Multimedia"></i>
-                    <h4>Videos y fotos</h4>
-                </div>
-            </a>
+    <div class="option">
+        <i class="far fa-futbol" title="Deportistas"></i>
+        <a href="../tabla/tabla.php"><h4>Compañeros</h4></a>
+    </div>
 
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-futbol" title="Deportistas"></i>
-                    <h4>Deportistas</h4>
-                </div>
-            </a>
 
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-id-badge" title="Contacto"></i>
-                    <h4>Contacto</h4>
-                </div>
-            </a>
+<a href="#">
+    <div class="option">
+        <i class="far fa-address-card" title="Nosotros"></i>
+        <a href="../index.html"><h4>Cerrar Sesión</h4></a>
+    </div>
+</a>
 
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-address-card" title="Nosotros"></i>
-                    <h4>Nosotros</h4>
-                </div>
-            </a>
+</div>
 
-            <a href="#">
-                <div class="option">
-                    <i class="far fa-address-card" title="Nosotros"></i>
-                    <a href="../index.html"><h4>Cerrar Sesión</h4></a>
-                </div>
-            </a>
-
-        </div>
+</div>
 
     </div>
 
@@ -95,7 +74,6 @@
         <th>ID</th>
         <th>NOMBRE</th>
         <th>USUARIO</th>
-        <th>PASSWORD</th>
         <th>DEPORTE</th>
         <th>EDAD</th>
         <th>CORREO</th>
@@ -115,7 +93,6 @@
         <td><?php echo $mostrar['Id'] ?> </td>  
         <td><?php echo $mostrar['nombre'] ?> </td>
         <td><?php echo $mostrar['usuario'] ?> </td>
-        <td><?php echo $mostrar['password'] ?> </td>
         <td><?php echo $mostrar['deporte'] ?> </td>
         <td><?php echo $mostrar['edad'] ?> </td>
         <td><?php echo $mostrar['correo'] ?> </td>

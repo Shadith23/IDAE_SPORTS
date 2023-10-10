@@ -9,7 +9,7 @@
     $filas=mysqli_num_rows($resultado);
 
     if($filas){
-        header("location:../paginaprofe/home.php");
+        header("location:../tablaprofes/tabla.php");
     }else{
         header("location:index.php?user=1");
     } 
